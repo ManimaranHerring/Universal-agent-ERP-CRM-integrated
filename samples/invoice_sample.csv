@@ -1,0 +1,5 @@
+po_number,line_id,qty_invoiced,unit_price_invoiced
+PO-101,1,5000,1.35
+PO-101,2,12000,0.85
+PO-102,1,8000,1.06
+PO-999,1,100,9.99
