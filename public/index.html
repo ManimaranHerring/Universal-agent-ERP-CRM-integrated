@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Universal Agent Full Demo</title>
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+<header>
+<h1>Universal Agent Full Demo</h1>
+<p>RFQ → Quote & AP 3‑Way Match</p>
+</header>
+
+
+<main>
+<section class="card">
+<h2>RFQ → Quote Agent</h2>
+<form id="rfqForm">
+<div class="row">
+<label>Buyer Company <input name="buyer_company" placeholder="Acme Ltd" /></label>
+<label>Buyer Contact <input name="buyer_contact" placeholder="Jane Doe" /></label>
+<label>Currency <input name="currency" value="USD" /></label>
+<label>Margin Target (0.0–0.5) <input name="margin_target" value="0.18" /></label>
+</div>
+<div class="row">
+<label>RFQ CSV <input type="file" name="rfq" accept=".csv" /></label>
+</div>
+<div class="row">
+<button type="submit">Generate Quote</button>
+<button type="button" id="rfqSample">Use Small Sample</button>
+<button type="button" id="rfqLarge">Use Large Dataset</button>
+<a href="/samples/rfq_sample.csv" target="_blank">Small CSV</a> ·
+<a href="/samples/rfq_large.csv" target="_blank">Large CSV</a>
+</div>
+</form>
+<div id="rfqOutput"></div>
+</section>
+
+
+<section class="card">
+<h2>AP 3‑Way Match Agent</h2>
+<form id="apForm">
+<div class="row">
+<label>PO CSV <input type="file" name="po" accept=".csv" /></label>
+<label>GRN CSV <input type="file" name="grn" accept=".csv" /></label>
+<label>Invoice CSV <input type="file" name="invoice" accept=".csv" /></label>
+</div>
+<div class="row">
+<button type="submit">Run Match</button>
+<button type="button" id="apSample">Use Small Sample</button>
+<button type="button" id="apLarge">Use Large Dataset</button>
+<span class="small-links">
+<a href="/samples/po_sample.csv" target="_blank">PO small</a> ·
+<a href="/samples/grn_sample.csv" target="_blank">GRN small</a> ·
+<a href="/samples/invoice_sample.csv" target="_blank">Invoice small</a> ·
+<a href="/samples/po_large.csv" target="_blank">PO large</a> ·
+<a href="/samples/grn_large.csv" target="_blank">GRN large</a> ·
+<a href="/samples/invoice_large.csv" target="_blank">Invoice large</a>
+</span>
+</div>
+</form>
+<div id="apOutput"></div>
+</section>
+</main>
+
+
+<footer>
+<p>MIT License · Local demo · No API keys required</p>
+</footer>
+
+
+<script src="/client.js"></script>
+</body>
+</html>
