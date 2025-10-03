@@ -1,0 +1,16 @@
+{
+"name": "universal-agent-full-demo",
+"version": "1.1.0",
+"private": true,
+"description": "Full demo with synthetic datasets for RFQ→Quote, AP 3-Way Match, and ERP/CRM integrations",
+"main": "src/server.js",
+"scripts": {
+"start": "node src/server.js"
+},
+"dependencies": {
+"csv-parse": "^5.5.6",
+"dotenv": "^16.4.5",
+"express": "^4.19.2",
+"multer": "^1.4.5-lts.1"
+}
+}
